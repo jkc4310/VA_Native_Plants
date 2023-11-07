@@ -1,7 +1,21 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using System.Data;
+using MySql.Data.MySqlClient;
+using VA_Native_Plants.Models;
+
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IDbConnection>((s) =>
+{
+    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("plant_database"));
+    conn.Open();
+    return conn;
+});
+
+builder.Services.AddTransient<IPlantRepository, PlantRepository>();
 
 var app = builder.Build();
 

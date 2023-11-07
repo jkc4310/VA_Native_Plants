@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Plants>
+
+<h2>Plants</h2>
+
+<table class="table">
+    <tr>
+        <th>Type</th>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>Region</th>
+        <th>Uses</th>
+        <th>Light</th>
+        <th>Moisture</th>
+        <th>Notes</th>
+    </tr>
+
+    @foreach (var plants in @Model)
+    {
+        <tr>
+            <td>@plants.Type</td>
+            <td>@plants.CommonName</td>
+            <td>@plants.ScientificName</td>
+            <td>@plants.Region</td>
+            <td>@plants.Uses</td>
+            <td>@plants.Light</td>
+            <td>@plants.Moisture</td>
+            <td>@plants.Notes</td>
+        </tr>
+    }
+
+</table>

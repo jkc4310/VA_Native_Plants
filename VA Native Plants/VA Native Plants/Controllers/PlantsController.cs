@@ -23,6 +23,15 @@ namespace VA_Native_Plants.Controllers
 
             return View(plants);
         }
+
+        //[HttpGet]
+        //[Route("Plants/ViewPlant/{commonName:string}")]
+        public IActionResult ViewPlant(string id)
+        {
+            var plants = repo.GetPlants(id);
+            return View(plants);
+        }
+
     }
 }
 

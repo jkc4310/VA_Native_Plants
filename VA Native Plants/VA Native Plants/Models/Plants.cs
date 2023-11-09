@@ -5,6 +5,7 @@ namespace VA_Native_Plants.Models
 	{
 		public Plants()
 		{
+           
 		}
 
 		public string? Type { get; set; }
@@ -16,6 +17,9 @@ namespace VA_Native_Plants.Models
         public string? Moisture { get; set; }
         public string? Notes { get; set; }
 
+    
+
+       
     }
 }
 

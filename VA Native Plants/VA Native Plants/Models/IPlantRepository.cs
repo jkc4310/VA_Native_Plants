@@ -7,6 +7,8 @@ namespace VA_Native_Plants.Models
 	public interface IPlantRepository
 	{
         public IEnumerable<Plants> GetAllPlants();
+
+        public Plants GetPlants(string commonName);
     }
 }
 

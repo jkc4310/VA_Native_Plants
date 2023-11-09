@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Data;
 using Dapper;
 
@@ -17,6 +18,11 @@ namespace VA_Native_Plants.Models
         public IEnumerable<Plants> GetAllPlants()
         {
             return _conn.Query<Plants>("SELECT * FROM PLANTS;");
+        }
+            
+        public Plants GetPlants(string commonName)
+        {
+            return _conn.QuerySingle<Plants>("SELECT * FROM PLANTS WHERE COMMONNAME = @commonName", new { commonName = commonName });
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿@model Plants
+  
+<h3>@Model.CommonName Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Type</th>
+        <th>Common Name</th>
+        <th>Scientific Name</th>
+        <th>Region</th>
+        <th>Uses</th>
+        <th>Light</th>
+        <th>Moisture</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td>@Model.Type</td>
+        <td>@Model.CommonName</td>
+        <td>@Model.ScientificName</td>
+        <td>@Model.Region</td>
+        <td>@Model.Uses</td>
+        <td>@Model.Light</td>
+        <td>@Model.Moisture</td>
+        <td>@Model.Notes</td>
+    </tr>
+</table>
+

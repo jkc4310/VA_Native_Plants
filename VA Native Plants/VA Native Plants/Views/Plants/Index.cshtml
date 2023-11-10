@@ -2,6 +2,10 @@
 
 <h2>Plants</h2>
 
+<div style="display: block">
+    <a href="/Plants/InsertPlant/">Create a New Plant</a>
+</div>
+
 <table class="table">
     <tr>
         <th>Type</th>
@@ -14,11 +18,11 @@
         <th>Notes</th>
     </tr>
 
-    @foreach (var plants in @Model)
-    {
+    @foreach (var plants in @Model) //removed Uri.EscapeDataString(@plants.CommonName) from first section. was causing null error
+        {
         <tr>
             <td>@plants.Type</td>
-            <td><a href="/Plants/ViewPlant/@Uri.EscapeDataString(plants.CommonName)">@plants.CommonName</a></td>
+            <td><a href="/Plants/ViewPlant/@plants.CommonName">@plants.CommonName</a></td> 
             <td>@plants.ScientificName</td>
             <td>@plants.Region</td>
             <td>@plants.Uses</td>

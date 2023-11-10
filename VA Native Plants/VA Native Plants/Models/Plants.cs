@@ -16,10 +16,11 @@ namespace VA_Native_Plants.Models
         public string? Light { get; set; }
         public string? Moisture { get; set; }
         public string? Notes { get; set; }
+        public IEnumerable<PlantAdd>? Categories { get; set; }
 
-    
 
-       
+
+
     }
 }
 

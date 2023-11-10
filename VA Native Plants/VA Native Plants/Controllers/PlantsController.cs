@@ -32,6 +32,34 @@ namespace VA_Native_Plants.Controllers
             return View(plants);
         }
 
+        public IActionResult UpdatePlant(string id)
+        {
+            Plants plants = repo.GetPlants(id);
+            if(plants == null)
+            {
+                return View("PlantNotFound");
+            }
+            return View(plants);
+        }
+
+        public IActionResult UpdatePlantToDatabase(Plants plants)
+        {
+            repo.UpdatePlant(plants);
+
+            return RedirectToAction("ViewPlant", new { id = plants.CommonName });
+        }
+
+        public IActionResult InsertPlant()
+        {
+            var plant = repo.AssignPlantAdd();
+            return View(plant);
+        }
+
+        public IActionResult InsertPlantToDatabase(Plants plantsToInsert)
+        {
+            repo.InsertPlant(plantsToInsert);
+            return RedirectToAction("Index");
+        }
     }
 }
 

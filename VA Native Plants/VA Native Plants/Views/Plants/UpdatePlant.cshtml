@@ -1,0 +1,19 @@
+﻿@model Plants
+
+<h2>Update @Model.CommonName</h2>
+
+@using (Html.BeginForm("UpdatePlantToDatabase", "Plants", "Post"))
+{
+    <input asp-for="CommonName" type="hidden" value="@Model.CommonName" />
+
+    <label asp-for="Region" class="control-label">Region</label>
+    <input type="text" name="Region" class="form-control" value="@Model.Region" />
+
+    <label asp-for="Notes" class="control-label">Notes</label>
+    <input type="text" name="Notes" class="form-control" value="@Model.Notes" />
+
+    <label asp-for="Uses" class="control-label">Uses</label>
+    <input type="text" name="Uses" class="form-control" value="@Model.Uses" />
+
+    <input type="submit" value="Update Plant" class="btn btn-primary" />
+}

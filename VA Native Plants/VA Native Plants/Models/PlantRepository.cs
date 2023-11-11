@@ -62,7 +62,10 @@ namespace VA_Native_Plants.Models
             return plant;
         }
 
-       
+        public void DeletePlant(Plants plants)
+        {
+            _conn.Execute("DELETE FROM PLANTS WHERE COMMONNAME = @id;", new { id = plants.CommonName });
+        }
     }
 }
     

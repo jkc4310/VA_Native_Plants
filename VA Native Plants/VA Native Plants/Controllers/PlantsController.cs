@@ -60,6 +60,12 @@ namespace VA_Native_Plants.Controllers
             repo.InsertPlant(plantsToInsert);
             return RedirectToAction("Index");
         }
+
+        public IActionResult DeletePlant(Plants plants)
+        {
+            repo.DeletePlant(plants);
+            return RedirectToAction("Index");
+        }
     }
 }
 

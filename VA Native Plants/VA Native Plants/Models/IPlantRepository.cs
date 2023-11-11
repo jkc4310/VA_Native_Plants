@@ -17,6 +17,8 @@ namespace VA_Native_Plants.Models
         public IEnumerable<PlantAdd> GetCategories();
 
         public Plants AssignPlantAdd();
+
+        public void DeletePlant(Plants plants);
     }
 }
 

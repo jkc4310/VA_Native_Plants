@@ -1,5 +1,6 @@
 ﻿html {
   font-size: 18px;
+  height: 100%;
 }
 
 h1{
@@ -36,7 +37,12 @@ body {
   font-family: system-ui;
   color: white;
   background-image: url("pexels-andrew-neel-3178786.jpg");
-  
+  position: relative; 
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
 }
 
 
@@ -49,6 +55,15 @@ body {
   color: white;
 }
 
+footer{
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+  width: 100vw;
+  white-space: nowrap;
+  line-height: 30px;
+  margin-top: auto;
+}
 
 
 

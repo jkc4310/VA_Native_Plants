@@ -4,6 +4,7 @@ using System.Linq;
 using System.Data;
 using Dapper;
 
+//Houses the implementation of the IplantRepository methods
 namespace VA_Native_Plants.Models
 {
 	public class PlantRepository : IPlantRepository
